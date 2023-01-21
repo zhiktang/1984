@@ -1,11 +1,9 @@
 // Require the necessary discord.js classes
 
-const { token, pathToModel } = require('./config.json');
+const { token} = require('./config.json');
 const { Client, GatewayIntentBits, Partials } = require('discord.js');
-const {exec} = require('child_process');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds], partials: [Partials.Channel] });
-botBusy = false;
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
 	console.log('Ready!');
